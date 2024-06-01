@@ -1,16 +1,14 @@
-import { useNumberStore } from "./stores/numberStore";
+import { BearBox } from "./component/BearBox";
 
-const App = () => {
-  const number = useNumberStore((state) => state.num);
-  const incNumber = useNumberStore((state) => state.increaseNumber);
-  const resetNumber = useNumberStore((state) => state.defaultNumber);
+function App() {
   return (
-    <div>
-      <h1>Zustand Doc</h1>
-      <p>number: {number}</p>
-      <button onClick={incNumber}>increase</button>
-      <button onClick={resetNumber}>reset</button>
+    <div className="container">
+      <h1>Zustand Tutorial</h1>
+      <div>
+        <BearBox />
+      </div>
     </div>
   );
-};
+}
+
 export default App;
